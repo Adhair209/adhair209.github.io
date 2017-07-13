@@ -91,16 +91,16 @@ $(document).ready(function(){
 		else if(d == "left") nx--;
 		else if(d == "up") ny--;
 		else if(d == "down") ny++;
-    console.log('nx='+nx+'\t'+'ny='+ny);
-    console.log('w/cw='+w/cw+'\t'+'h/cw='+h/cw);
+    //console.log('nx='+nx+'\t'+'ny='+ny);
+    //console.log('w/cw='+w/cw+'\t'+'h/cw='+h/cw);
 		//Lets add the game over clauses now
 		//This will restart the game if the snake hits the wall
 		//Lets add the code for body collision
 		//Now if the head of the snake bumps into its body, the game will restart
 		if(nx == -1 || nx >= w/cw || ny == -1 || ny >= h/cw || check_collision(nx, ny, snake_array))
 		{
-      console.log("COLLISION!!!")
-      console.log('nx='+nx+'\t'+'ny='+ny);
+      //console.log("COLLISION!!!")
+      //console.log('nx='+nx+'\t'+'ny='+ny);
 			//restart game
 			init();
 			//Lets organize the code a bit now.
