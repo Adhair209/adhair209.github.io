@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+canvas {
+  display: inline;
+}
+.box {
+  display: inline-block;
+  width: 400px;
+  margin:1rem;
+}
+</style>
+</head>
+<body style="background-color:gray">
+<h1 style="text-align:center; font-size:100px; color:green;">JavaScript Art</h1>
+<div>
+  <div class="box">
+      <canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3; color:green;"></canvas>
+      <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(190,100,80,0,4*Math.PI);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(210,80,20,0,4*Math.PI);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(160,80,20,0,4*Math.PI);
+        ctx.moveTo(240,130);
+        ctx.lineTo(140,130);
+        ctx.stroke();
+      </script>
+  </div>
+  <div class="box">
+      <canvas id="myCanvas2" width="400" height="200" style="border:1px solid #d3d3d3; color:green;"></canvas>
+      <script>
+        var c2 = document.getElementById("myCanvas2");
+        var ctx2 = c2.getContext("2d");
+        ctx2.moveTo(190,80);
+        ctx2.lineTo(190,150);
+        ctx2.stroke();
+        ctx2.beginPath();
+        ctx2.arc(190,55,25,0,2*Math.PI);
+        ctx2.stroke();
+        ctx2.moveTo(190,150);
+        ctx2.lineTo(180,200);
+        ctx2.stroke();
+        ctx2.moveTo(190,150);
+        ctx2.lineTo(210,200);
+        ctx2.stroke();
+        ctx2.moveTo(190,110);
+        ctx2.lineTo(210,140);
+        ctx2.stroke();
+        ctx2.moveTo(190,110);
+        ctx2.lineTo(170,140);
+        ctx2.stroke();
+        ctx2.beginPath();
+        ctx2.arc(180,50,5,0,1*Math.PI);
+        ctx2.stroke();
+        ctx2.beginPath();
+        ctx2.arc(200,50,5,0,1*Math.PI);
+        ctx2.stroke();
+        ctx2.moveTo(165,50);
+        ctx2.lineTo(215,50);
+        ctx2.stroke();
+        ctx2.moveTo(170,40);
+        ctx2.lineTo(210,40);
+        ctx2.stroke();
+        ctx2.moveTo(214,45);
+        ctx2.lineTo(220,80);
+        ctx2.stroke();
+        ctx2.moveTo(220,80);
+        ctx2.lineTo(215,82);
+        ctx2.stroke();
+        ctx2.moveTo(215,59);
+        ctx2.lineTo(215,87);
+        ctx2.stroke();
+        ctx2.moveTo(215,87);
+        ctx2.lineTo(205,87);
+        ctx2.stroke();
+        ctx2.moveTo(205,87);
+        ctx2.lineTo(205,74);
+        ctx2.stroke();
+        ctx2.moveTo(197,53);
+        ctx2.lineTo(193,58);
+        ctx2.stroke();
+        ctx2.moveTo(173,148);
+        ctx2.lineTo(100,20);
+        ctx2.stroke();
+        ctx2.moveTo(171,130);
+        ctx2.lineTo(158,140);
+        ctx2.stroke();
+        ctx2.moveTo(205,148);
+        ctx2.lineTo(275,20);
+        ctx2.stroke();
+        ctx2.moveTo(207,129);
+        ctx2.lineTo(221,137);
+        ctx2.stroke();
+      </script>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+    form {
+    display: inline-block;
+    text-align: center;
+}
+/*number inputs*/
+input[type="number"] {
+width:50px; height:30px;
+text-align:center;
+margin:3px;
+float:left;}
+
+/*select and equals elements*/
+select, .equals {
+margin:3px;
+float:left;}
+
+/*output element*/
+output {
+display:block;
+border:1px solid #333333;
+border-radius:5px;
+min-width:25px; height:25px;
+margin:3px; padding:2px;
+text-align:center;
+background:#000000;
+color:#ffffff;
+float:left; }
+
+</style>
+<script type="text/javascript">
+function updateOutput() {
+//calculate
+var form = document.getElementById("calc");
+var out = form.elements["z"];
+var num1 = parseInt(form.elements["x"].value);
+var num2 = parseInt(form.elements["y"].value);
+var operator = parseInt(form.elements["op"].value);
+
+	//set output depending on operator
+switch(operator)
+{
+	//add
+	case 0:
+	out.value = num1+num2;
+  	break;
+  	//subtract
+	case 1: out.value = num1-num2;
+	break;
+	//multiply
+	case 2: out.value = num1*num2;
+	break;
+	//divide
+	case 3: out.value = (num1/num2).toFixed(1);//only one digit after decimal place
+	break;
+	default:
+  	break;
+}
+}
+</script>
+</head>
+<body style="color:green; background-color:black; font-size:20px;">
+<br>
+<h1 style="text-align:center; font-size:100px; color:green;">Calculator 2</h1>
+<div style="text-align:center">
+<form id="calc" oninput="updateOutput()">
+<input name="x" type="number" value="0" />
+<select name="op" onchange="updateOutput()">
+	<option value="0">+</option>
+	<option value="1">-</option>
+	<option value="2">×</option>
+	<option value="3">÷</option>
+</select>
+<input name="y" type="number" value="0" />
+<div class="equals"> = </div>
+<output name="z" for="x y">0</output>
+
+</form>
+</div>
+</body>
+</html>
